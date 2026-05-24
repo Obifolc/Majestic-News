@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Majestic News</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: 'Georgia', serif;
+        background:#f4f1ea;
+        color:#222;
+    }
+
+    header{
+        background:linear-gradient(185deg,#09449b,#3a2c1f);
+        color:white;
+        padding:40px 20px;
+        text-align:center;
+        box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    header h1{
+        margin:0;
+        font-size:4rem;
+        letter-spacing:3px;
+    }
+
+    header p{
+        max-width:900px;
+        margin:20px auto 0;
+        font-size:1.2rem;
+        line-height:1.8;
+        opacity:0.95;
+    }
+
+    .container{
+        max-width:1200px;
+        margin:5redazionemajesticnews@gmail.com;
+        padding:10px 20px;
+    }
+
+    .intro{
+        background:white;
+        padding:40px;
+        border-radius:15px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        margin-bottom:40px;
+    }
+
+    .intro h2{
+        margin-top:0;
+        color:#5a3b1d;
+    }
+
+    .highlight{
+        font-style:italic;
+        color:#8a5b2c;
+        font-size:1.1rem;
+    }
+
+    .articles{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        gap:25px;
+    }
+
+    .card{
+        background:white;
+        border-radius:15px;
+        padding:25px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+    }
+
+    .card h3{
+        margin-top:0;
+        color:#3a2c1f;
+    }
+
+    .pdf-btn{
+        display:inline-block;
+        margin-top:15px;
+        padding:10px 18px;
+        background:#09449b;
+        color:white;
+        text-decoration:none;
+        border-radius:8px;
+        transition:0.3s;
+		background: linear-gradient(185deg,#09449b,#3a2c1f);
+    }
+
+    .pdf-btn:hover{
+        background:#8a5b2c;
+    }
+
+    footer{
+        background: linear-gradient(185deg,#09449b,#3a2c1f);
+        color:#fff;
+        text-align:center;
+        padding:30px 20px;
+        margin-top:20px;
+    }
+
+    footer a{
+        color:#d8b98a;
+        text-decoration:none;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Majestic News</h1>
+
+</header>
+
+<div class="container">
+
+    <section class="intro">
+        <h2>Benvenuti nel dietro le quinte</h2>
+
+        <p>
+            Dopo decenni di silenzio, la catena più prestigiosa rompe finalmente il mistero.
+            Il Serena Majestic Hotel Residence apre le porte non solo agli ospiti,
+            ma anche alle storie incredibili che vivono ogni giorno tra reception,
+            cucina, housekeeping e corridoi.
+        </p>
+
+        <p class="highlight">
+            “Non racconteremo solo il menù del giorno...
+            ma aneddoti talmente assurdi da sembrare inventati.”
+        </p>
+
+        <p>
+            Questo giornale nasce per raccontare con ironia i volti,
+            le abitudini e le leggende del nostro personale.
+        </p>
+    </section>
+
+    <section>
+        <h2>Ultimi Articoli</h2>
+
+        <div class="articles">
+
+            <!-- ARTICOLO 1 -->
+            <div class="card">
+                <h3>La Guerra del Carrello delle Pulizie</h3>
+
+                <p>
+                    Una misteriosa battaglia silenziosa combatte ogni mattina
+                    nei corridoi del quinto piano...
+                </p>
+
+                <a class="pdf-btn" href="pdf/articolo1.pdf" target="_blank">
+                    Leggi PDF
+                </a>
+            </div>
+
+            <!-- ARTICOLO 2 -->
+            <div class="card">
+                <h3>Il Mistero del Cucchiaio Sparito</h3>
+
+                <p>
+                    Nessuno sa dove finiscono. Nessuno osa parlarne.
+                    Ma la cucina ha aperto un’indagine interna.
+                </p>
+
+                <a class="pdf-btn" href="pdf/articolo2.pdf" target="_blank">
+                    Leggi PDF
+                </a>
+            </div>
+
+            <!-- ARTICOLO 3 -->
+            <div class="card">
+                <h3>Reception by Night</h3>
+
+                <p>
+                    Cosa accade davvero dopo mezzanotte?
+                    Telefonate impossibili e ospiti leggendari.
+                </p>
+
+                <a class="pdf-btn" href="pdf/articolo3.pdf" target="_blank">
+                    Leggi PDF
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>
+        ©️ 2026 Majestic News — 
+    </p>
+
+    <p>
+        Contatti redazione:
+        <a href="mailto:redazionemajesticnews@gmail.com">
+            redazionemajesticnews@gmail.com
+        </a>
+    </p>
+</footer>
+
+</body>
+</html>

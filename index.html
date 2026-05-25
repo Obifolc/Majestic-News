@@ -8,7 +8,7 @@
 <style>
     body{
         margin:0;
-        font-family: 'Georgia', serif;
+        font-family:'Georgia', serif;
         background:#f4f1ea;
         color:#222;
     }
@@ -27,23 +27,21 @@
         letter-spacing:3px;
     }
 
-	h2{
-    position:relative;
-    display:inline-block;
-    padding-bottom:10px;
-}
+    h2{
+        position:relative;
+        display:inline-block;
+        padding-bottom:10px;
+    }
 
-h2::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-
-    width:70%;
-    height:2px;
-
-    background:#d8b98a;
-}
+    h2::after{
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:0;
+        width:70%;
+        height:2px;
+        background:#d8b98a;
+    }
 
     header p{
         max-width:900px;
@@ -54,10 +52,10 @@ h2::after{
     }
 
     .container{
-    max-width:1200px;
-    margin:20px auto;
-    padding:10px 10px;
-}
+        max-width:1200px;
+        margin:20px auto;
+        padding:10px 10px;
+    }
 
     .intro{
         background:white;
@@ -78,55 +76,46 @@ h2::after{
         font-size:1.1rem;
     }
 
-	/* ULTIME DAL CORRIDOIO */
+    /* ULTIME DAL CORRIDOIO */
 
-.corridor-news{
-    margin-bottom:50px;
-}
+    .corridor-news{
+        margin-bottom:50px;
+    }
 
-.scroll-news{
-    display:flex;
-    gap:10px;
+    .scroll-news{
+        display:flex;
+        gap:10px;
+        overflow-x:auto;
+        padding:10px 5px;
+        scroll-behavior:smooth;
+    }
 
-    overflow-x:auto;
-    padding:10px 5px;
+    .scroll-news::-webkit-scrollbar{
+        height:3px;
+    }
 
-    scroll-behavior:smooth;
-}
+    .scroll-news::-webkit-scrollbar-thumb{
+        background:#8a5b2c;
+        border-radius:10px;
+    }
 
-.scroll-news::-webkit-scrollbar{
-    height:3px;
-}
+    .news-box{
+        min-width:300px;
+        background:white;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        flex-shrink:0;
+        font-size:1rem;
+        line-height:1.6;
+        border-left:5px solid #09449b;
+        transition:0.3s;
+    }
 
-.scroll-news::-webkit-scrollbar-thumb{
-    background:#8a5b2c;
-    border-radius:10px;
-}
-
-.news-box{
-    min-width:300px;
-
-    background:white;
-    padding:20px;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-
-    flex-shrink:0;
-
-    font-size:1rem;
-    line-height:1.6;
-
-    border-left:5px solid #09449b;
-
-    transition:0.3s;
-}
-
-.news-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
+    .news-box:hover{
+        transform:translateY(-5px);
+        box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
 
     .articles{
         display:grid;
@@ -146,9 +135,29 @@ h2::after{
         transform:translateY(-5px);
     }
 
+    /* HEADER ARTICOLI */
+
+    .card-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:10px;
+        margin-bottom:15px;
+        border-bottom:1px solid #e5d7c3;
+        padding-bottom:10px;
+    }
+
     .card h3{
-        margin-top:0;
+        margin:0;
         color:#09449b;
+        font-size:1.3rem;
+    }
+
+    .article-date{
+        font-size:0.9rem;
+        color:#777;
+        white-space:nowrap;
+        font-style:italic;
     }
 
     .pdf-btn{
@@ -160,16 +169,16 @@ h2::after{
         text-decoration:none;
         border-radius:8px;
         transition:0.3s;
-		background: linear-gradient(185deg,#09449b,#3a2c1f);
+        background:linear-gradient(185deg,#09449b,#3a2c1f);
     }
 
     .pdf-btn:hover{
-        background:#222; 
-		color:#fff;
+        background:#222;
+        color:#fff;
     }
 
     footer{
-        background: linear-gradient(185deg,#09449b,#3a2c1f);
+        background:linear-gradient(185deg,#09449b,#3a2c1f);
         color:#fff;
         text-align:center;
         padding:10px 20px;
@@ -181,18 +190,37 @@ h2::after{
         text-decoration:none;
     }
 
+    /* RESPONSIVE */
+
+    @media(max-width:600px){
+
+        .card-header{
+            flex-direction:column;
+            align-items:flex-start;
+        }
+
+        .article-date{
+            margin-top:-5px;
+        }
+
+        header h1{
+            font-size:2.5rem;
+        }
+    }
+
 </style>
 </head>
+
 <body>
 
 <header>
     <h1>Majestic News</h1>
-
 </header>
 
 <div class="container">
 
     <section class="intro">
+
         <h2>Benvenuti nel dietro le quinte</h2>
 
         <p>
@@ -211,84 +239,125 @@ h2::after{
             Questo giornale nasce per raccontare con ironia i volti,
             le abitudini e le leggende del nostro personale.
         </p>
+
     </section>
-<section class="corridor-news">
 
-    <h2>Ultime dal Corridoio</h2>
+    <!-- ULTIME DAL CORRIDOIO -->
 
-    <div class="scroll-news">
+    <section class="corridor-news">
 
-        <div class="news-box">
-            🍝 Misteriosa sparizione di 14 tiramisù dalla cucina centrale.
+        <h2>Ultime dal Corridoio</h2>
+
+        <div class="scroll-news">
+
+            <div class="news-box">
+                🍝 Misteriosa sparizione di 14 tiramisù dalla cucina centrale.
+            </div>
+
+            <div class="news-box">
+                🎤 La Crew tenta di convincere Bubbola a restare.
+            </div>
+
+            <div class="news-box">
+                ☕ Record assoluto di caffè consumati alla reception.
+            </div>
+
+            <div class="news-box">
+                🛎️ Ospite chiede una pizza alle 4 del mattino.
+            </div>
+
+            <div class="news-box">
+                📦 Sparite misteriosamente 32 asciugamani in una notte.
+            </div>
+
         </div>
 
-        
+    </section>
 
-        <div class="news-box">
-            🎤 La Crew tenta di convincere Bubbola a restare.
-        </div>
+    <!-- ARTICOLI -->
 
-        <div class="news-box">
-            ☕ Record assoluto di caffè consumati alla reception.
-        </div>
-
-        <div class="news-box">
-            🛎️ Ospite chiede una pizza alle 4 del mattino.
-        </div>
-
-        <div class="news-box">
-            📦 Sparite misteriosamente 32 asciugamani in una notte.
-        </div>
-
-    </div>
-
-</section>
     <section>
+
         <h2>Ultimi Articoli</h2>
 
         <div class="articles">
 
-            <!-- ARTICOLO 2 -->
+			   <!-- ARTICOLO 3 -->
+
             <div class="card">
-                <h3>BUBBOLA VUOLE ANDARSENE</h3>
+
+                <div class="card-header">
+                    <h3>APOCALISSE IN LAVANDERIA</h3>
+                    <span class="article-date">Edizione Straordinaria,25 Maggio 2026</span>
+                </div>
+
+                <p>
+                    Delirio al rialzato di Levante, Panico, misticismo e calzini spaiati.
+					Quello che sta succedendo nell'area lavanderia del Serena Majestic non è più un disservizio,
+					è un colpo di stato termodinamico. Le lavatrici del villaggio si sono ufficialmente dichiarate 
+					"Zone Autonome Fuori dal Tempo" e rispondono solo a leggi proprie.
+                </p>
+
+                <a class="pdf-btn" href="articolo3.pdf" target="_blank">
+                    Leggi PDF
+                </a>
+
+            </div>
+
+
+            <!-- ARTICOLO 2 -->
+
+            <div class="card">
+
+                <div class="card-header">
+                    <h3>BUBBOLA VUOLE ANDARSENE</h3>
+                    <span class="article-date">23 Maggio 2026</span>
+                </div>
 
                 <p>
                     La mascotte leggendaria, ombra instancabile del Serena Majestic, è
-stanca. La Crew Bluserena tenta il tutto per tutto in una corsa contro
-il tempo.
+                    stanca. La Crew Bluserena tenta il tutto per tutto in una corsa contro
+                    il tempo.
                 </p>
 
                 <a class="pdf-btn" href="articolo2.pdf" target="_blank">
                     Leggi PDF
                 </a>
+
             </div>
 
             <!-- ARTICOLO 1 -->
+
             <div class="card">
-                <h3>BLUSERENA VA IN STAMPA </h3>
+
+                <div class="card-header">
+                    <h3>BLUSERENA VA IN STAMPA</h3>
+                    <span class="article-date">16 Maggio 2026</span>
+                </div>
 
                 <p>
                     Preparatevi a una lettura che ridefinisce il concetto di
-ospitalità. Il nuovo capitolo è appena iniziato e, ve lo
-assicuriamo, non riuscirete a staccare gli occhi dalle
-pagine.
+                    ospitalità. Il nuovo capitolo è appena iniziato e, ve lo
+                    assicuriamo, non riuscirete a staccare gli occhi dalle
+                    pagine.
                 </p>
 
                 <a class="pdf-btn" href="articolo1.pdf" target="_blank">
                     Leggi PDF
                 </a>
+
             </div>
 
-            
-
         </div>
+
     </section>
 
 </div>
 
 <footer>
+
     <p>
-        ©️ 2026 Majestic News — 
+        ©️ 2026 Majestic News —
     </p>
 
     <p>
@@ -297,6 +366,7 @@ pagine.
             redazionemajesticnews@gmail.com
         </a>
     </p>
+
 </footer>
 
 </body>

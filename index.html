@@ -79,6 +79,56 @@ h2::after{
         font-size:1.1rem;
     }
 
+	/* ULTIME DAL CORRIDOIO */
+
+.corridor-news{
+    margin-bottom:50px;
+}
+
+.scroll-news{
+    display:flex;
+    gap:20px;
+
+    overflow-x:auto;
+    padding:20px 5px;
+
+    scroll-behavior:smooth;
+}
+
+.scroll-news::-webkit-scrollbar{
+    height:8px;
+}
+
+.scroll-news::-webkit-scrollbar-thumb{
+    background:#8a5b2c;
+    border-radius:10px;
+}
+
+.news-box{
+    min-width:300px;
+
+    background:white;
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+    flex-shrink:0;
+
+    font-size:1rem;
+    line-height:1.6;
+
+    border-left:5px solid #09449b;
+
+    transition:0.3s;
+}
+
+.news-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
     .articles{
         display:grid;
         grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -165,7 +215,37 @@ h2::after{
             le abitudini e le leggende del nostro personale.
         </p>
     </section>
+<section class="corridor-news">
 
+    <h2>Ultime dal Corridoio</h2>
+
+    <div class="scroll-news">
+
+        <div class="news-box">
+            🍝 Misteriosa sparizione di 14 tiramisù dalla cucina centrale.
+        </div>
+
+        
+
+        <div class="news-box">
+            🎤 La Crew tenta di convincere Bubbola a restare.
+        </div>
+
+        <div class="news-box">
+            ☕ Record assoluto di caffè consumati alla reception.
+        </div>
+
+        <div class="news-box">
+            🛎️ Ospite chiede una pizza alle 4 del mattino.
+        </div>
+
+        <div class="news-box">
+            📦 Sparite misteriosamente 32 asciugamani in una notte.
+        </div>
+
+    </div>
+
+</section>
     <section>
         <h2>Ultimi Articoli</h2>
 
